@@ -1,0 +1,427 @@
+@font-face {
+    font-family: DrukTextWide;
+    src: url("/public/fonts/Druk/DrukTextWide-Bold.otf") format("opentype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: DrukWide;
+    src: url("/public/fonts/Druk/DrukWide-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Graphik;
+    src: url("/public/fonts/Graphik/Graphik-400-Regular.otf") format("opentype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Graphik;
+    src: url("/public/fonts/Graphik/Graphik-500-Medium.otf") format("opentype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: Graphik;
+    src: url("/public/fonts/Graphik/Graphik-600-Semibold.otf") format("opentype");
+    font-weight: 600;
+}
+
+html {
+    --hover-color: #67E2C5;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+a:hover {
+    color: var(--hover-color);
+}
+
+p {
+    margin: 0px;
+}
+
+body {
+    background-color: black;
+    color: white;
+    font-family: 'Graphik';
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#home-top {
+    height: 790px;
+    background-image: url("/public/images/stars.png");
+    /* padding: 45px 52px 0px 55px; */
+}
+
+#header-bar {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 185.5px;
+    padding: 45px 52px 0px 55px;
+}
+
+#header-bar-left {
+    font-family: 'DrukWide';
+    font-weight: 500;
+    font-size: 28px;
+}
+
+#header-bar-left:hover {
+    color: white;
+}
+
+#header-bar-right {
+    display: flex;
+    width: 556px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-bar-right-contact {
+    width: 173px;
+    height: 40px;
+    color: black;
+    font-family: 'DrukTextWide';
+    font-weight: 700;
+    font-size: 16px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-bar-right-contact:hover {
+    background-color: var(--hover-color);
+}
+
+#home-top-welcome-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+#home-top-welcome {
+    width: 1005px;
+    line-height: 127.1%;
+    letter-spacing: -0.02em;
+
+}
+
+h1 {
+    font-family: 'DrukWide';
+    font-weight: 500;
+    font-size: 56px;
+}
+
+#about-me {
+    margin: 101px 96px 248px 62px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-header {
+    font-family: 'DrukWide';
+    font-weight: 500;
+    font-size: 38px;
+}
+
+#about-me-text .section-header {
+    margin-bottom: 70px;
+}
+
+#about-me-text-paragraph {
+    font-weight: 400;
+    font-size: 32px;
+    width: 615px;
+    line-height: 123.6%;
+    letter-spacing: -0.02em;
+    margin-bottom: 59px;
+}
+
+#about-me-text-link-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+
+.about-me-text-link {
+    margin-bottom: 28px;
+    align-self: flex-start;
+}
+
+.link {
+    cursor: pointer;
+    font-size: 32px;
+}
+
+.custom-underline {
+    border-bottom: 3px solid white;
+    padding-bottom: 3px;
+}
+
+.custom-underline:hover {
+    border-bottom: 3px solid var(--hover-color);
+}
+
+#recent-work {
+    display: flex;
+    flex-direction: column;
+    margin: 0px 56px 288px 60px;
+}
+
+#recent-work.research-page {
+    margin-bottom: 120px;
+}
+
+#recent-work-header {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 96px;
+    border-bottom: 3px solid white;
+}
+
+#wandering-black-holes:hover {
+    background-image: url("/public/images/wandering_black_holes.png");
+}
+
+#stellar-wind-bubbles:hover {
+    background-image: url("/public/images/stellar_wind_bubbles.png");
+}
+
+.recent-work-item {
+    padding: 31px 0 40px 0;
+    border-bottom: 3px solid white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.recent-work-item-arrow {
+    display: none;
+}
+
+.recent-work-item:hover > .recent-work-item-arrow {
+    display: inline;
+    font-size: 64px;
+}
+
+.recent-work-item:hover {
+    cursor: pointer;
+    color: white; /* override a's hover */
+}
+
+.recent-work-item-date {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.recent-work-item-title {
+    font-family: 'DrukWide';
+    font-weight: 500;
+    font-size: 56px;
+    line-height: 123.6%;
+    letter-spacing: -0.02em;
+    width: 887px;
+}
+
+.recent-work-item-desc {
+    width: 872px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+}
+
+#media-talks {
+    display: flex;
+    flex-direction: column;
+}
+
+#media-talks-header {
+    margin: 0px 60px 51px;
+    display: flex;
+    justify-content: space-between;
+}
+
+#media-talks-video img {
+    width: 100%;
+}
+
+#media-talks-video {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#play-button-container {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 64px;
+    width: 172px;
+    height: 172px;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+#play-button-container span {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#media-talks-video:hover > #play-button-container {
+    border: 2px solid var(--hover-color);
+    color: var(--hover-color);
+    background-color: rgba(103, 226, 197, 0.2);
+}
+
+
+#footer {
+    padding-top: 199px;
+    padding-bottom: 104px;
+    padding-left: 60px;
+    display: flex;
+    width: 70%;
+    justify-content: space-between;
+}
+
+#footer-contact {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+}
+
+#footer-contact-name {
+    font-size: 32px;   
+    padding-bottom: 12px;
+}
+
+#footer-contact-email {
+    font-weight: 500;
+    font-size: 24px;
+}
+
+.footer-link {
+    padding-bottom: 28px;
+    font-weight: 500;
+    font-size: 24px;
+}
+
+/* RESEARCH */
+
+#research-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#research-header.talks {
+    margin-bottom: 138px;
+}
+
+#research-header-desc {
+    width: 872px;
+    font-size: 32px;
+    line-height: 123.6%;
+    text-align: center;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+}
+
+#research-header-desc a {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
+#academic-story {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 60px;
+}
+
+#academic-story-title {
+    margin-bottom: 70px;
+}
+
+#academic-story-desc {
+    width: 1096px;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 123.6%;
+    letter-spacing: -0.02em;
+    margin-top: 90px;
+}
+
+/* TALKS */
+
+#talks-list {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 171px;
+    margin-right: 163px;
+}
+
+#talks-list-item {
+    display: flex;
+    margin-bottom: 100px;
+    justify-content: center;
+}
+
+#talks-list-item img {
+    width: 537px;
+    height: 358px;
+    margin-right: 35px;
+}
+
+#talks-list-item-details {
+    display: flex;
+    flex-direction: column;
+}
+
+#talks-list-item-details-title {
+    width: 534px;
+    font-family: 'DrukWide';
+    font-weight: 500;
+    font-size: 38px;
+    line-height: 123.6%;
+    letter-spacing: -0.02em;
+    margin-bottom: 15px;
+}
+
+#talks-list-item-details-desc {
+    width: 424px;
+    font-family: 'Graphik';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+}
+
+#talks-list-item-details-desc a {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--hover-color);
+}
+
+#talks-list-item-details a {
+    align-self: flex-start;
+    font-family: 'Graphik';
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 123.6%;
+    letter-spacing: -0.02em;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lachlan Lancaster</title>
+    <link rel="stylesheet" href="/public/normalize.css">
+    <link rel="stylesheet" href="/public/main.css">
+</head>
+
+<body>
+    <section id="home-top">
+        <div id="header-bar">
+            <a href="/" id="header-bar-left">Lachlan Lancaster</a>
+            <section id="header-bar-right">
+                <a href="/talks">Talks & Media</a>
+                <a href="/research">Research</a>
+                <a href="/cv">CV</a>
+                <a href="mailto:todo@email.com" id="header-bar-right-contact">Contact</a>
+            </section>
+        </div>
+        <div id="home-top-welcome-wrapper">
+            <h1 id="home-top-welcome">
+                Hi — I’m a 5th year phD in Astrophysical sciences at Princeton University studying star formation
+            </h1>
+        </div>
+    </section>
+    <section id="about-me">
+        <section id="about-me-text">
+            <section class="section-header">About me</section>
+            <p id="about-me-text-paragraph">
+                I have broad research interests but my work in recent years has focused on the regulation of star
+                formation within the dense, molecular clouds where stars form.
+                <br>
+                <br>
+                Specifically, my thesis has concentrated on the role that winds from massive stars play in this process.
+            </p>
+            <section id="about-me-text-link-wrapper">
+                <a href="/publications" class="custom-underline about-me-text-link link">See my publications</a>
+                <a href="/cv" class="custom-underline about-me-text-link link">View my CV</a>
+            </section>
+        </section>
+        <section id="about-me-photo">
+            <img src="/public/images/portrait.png" alt="portrait">
+        </section>
+    </section>
+    <section id="recent-work">
+        <section id="recent-work-header">
+            <span class="section-header">Recent work</span>
+            <a href="/research" class="custom-underline link">See all research</a>
+        </section>
+        <a href="/research/wandering-black-holes" class="recent-work-item" id="wandering-black-holes">
+            <section class="recent-work-item-left">
+                <div class="recent-work-item-date">Aug 2, 2021</div>
+                <div class="recent-work-item-title">Wandering black holes in the Milky Way</div>
+            </section>
+            <span class="recent-work-item-arrow">→</span>
+        </a>
+        <a href="/research/stellar-wind-bubbles" class="recent-work-item" id="stellar-wind-bubbles">
+            <section class="recent-work-item-left">
+                <div class="recent-work-item-date">Jun 20, 2021</div>
+                <div class="recent-work-item-title">Efficiently Cooled Stellar Wind Bubbles</div>
+            </section>
+            <span class="recent-work-item-arrow">→</span>
+        </a>
+    </section>
+    <section id="media-talks">
+        <section id="media-talks-header">
+            <span class="section-header">Media & talks</span>
+            <a href="/talks" class="custom-underline link">See all talks & media</a>
+        </section>
+        <section id="media-talks-video">
+            <img src="/public/images/video_screenshot.png" alt="video_screenshot">
+            <section id="play-button-container">
+                <span>▶</span>
+            </section>
+        </section>
+    </section>
+    {{ template "footer" }}
+</body>
+
+</html>

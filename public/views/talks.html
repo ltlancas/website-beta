@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lachlan Lancaster - Research</title>
+    <link rel="stylesheet" href="/public/normalize.css">
+    <link rel="stylesheet" href="/public/main.css">
+</head>
+
+<body>
+    <div id="header-bar">
+        <a href="/" id="header-bar-left">Lachlan Lancaster</a>
+        <section id="header-bar-right">
+            <a href="/talks" class="custom-underline">Talks & Media</a>
+            <a href="/research">Research</a>
+            <a href="/cv">CV</a>
+            <a href="mailto:todo@email.com" id="header-bar-right-contact">Contact</a>
+        </section>
+    </div>
+    <div id="research-header" class="talks">
+        <h1 id="research-header-title">Talks & media</h1>
+    </div>
+    <section id="talks-list">
+        {{ range . }}
+        <section id="talks-list-item">
+            <img src="/public/images/{{ .Image }}" alt="{{ .Image }}">
+            <section id="talks-list-item-details">
+                <p id="talks-list-item-details-title">{{ .Title }}</p>
+                <p id="talks-list-item-details-desc">{{ .Description }}</p>
+                <a href="{{ .Link }}" class="custom-underline">{{ .CallToAction }}</a>
+            </section>
+        </section>
+        {{ end }}
+    </section>
+    <section id="footer">
+        <section id="footer-contact">
+            <span id="footer-contact-name">Lachlan Lancaster</span>
+            <span id="footer-contact-email">lachlan@princeton.edu</span>
+        </section>
+        <section class="footer-links">
+            <a href="https://github.com/lachlanlancaster" class="footer-link">GitHub</a>
+            <a href="https://twitter.com/lachlanlancaster" class="footer-link">Twitter</a>
+            <a href="https://www.linkedin.com/in/lachlan-lancaster-3181576a" class="footer-link">Linkedin</a>
+        </section>
+        <section class="footer-links">
+            <a class="footer-link">About</a>
+            <a class="footer-link">Research</a>
+            <a class="footer-link">Talks & media</a>
+        </section>
+    </section>
+</body>
+
+</html>
