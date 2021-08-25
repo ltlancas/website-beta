@@ -344,6 +344,11 @@ h1 {
     font-weight: 600;
 }
 
+#academic-story-desc a {
+    color: var(--hover-color);
+    font-weight: 600;
+}
+
 #academic-story {
     display: flex;
     flex-direction: column;
