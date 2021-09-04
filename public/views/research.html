@@ -24,32 +24,18 @@
             <span class="section-header">Latest posts</span>
             <a href="/research" class="custom-underline link">See all research</a>
         </section>
-        <a href="/research/wandering-black-holes" class="recent-work-item" id="wandering-black-holes">
-            <section class="recent-work-item-left">
-                <div class="recent-work-item-date">Aug 2, 2021</div>
-                <div class="recent-work-item-title">Wandering black holes in the Milky Way</div>
-                <p class="recent-work-item-desc">
-                    Working with Dr. Jenny Greene and other talented collaborators, we set out to try to find “wandering” Intermediate Mass
-                    Black Holes (IMBHs) that used to live at the center of dense star clusters that have since disrupted in the potential of
-                    our Milky Way Galaxy. Past works had postulated that such wandering IMBHs would retain several stars in their
-                    gravitational influence, remaining tightly bound around them in what would appear to be an extremely dense star cluster.
-                </p>
-            </section>
-            <span class="recent-work-item-arrow">→</span>
-        </a>
-        <a href="/research/stellar-wind-bubbles" class="recent-work-item" id="stellar-wind-bubbles">
-            <section class="recent-work-item-left">
-                <div class="recent-work-item-date">Jun 20, 2021</div>
-                <div class="recent-work-item-title">Efficiently Cooled Stellar Wind Bubbles</div>
-                <p class="recent-work-item-desc">
-                    In the middle of April, 2021 I released the first two major works of my thesis outlining a new theory for the expansion
-                    of stellar wind bubbles from clusters of massive stars in dense, turbulent molecular clouds (the sorts of places where
-                    these massive stars form). They are now published in the Astrophysical Journal. You can find an abridged explanation of
-                    these papers in a Twitter thread I wrote when I posted them.
-                </p>
-            </section>
-            <span class="recent-work-item-arrow">→</span>
-        </a>
+        {{ range . }}
+            <a href="{{ .Link }}" class="recent-work-item" id="{{ .ID }}">
+                <section class="recent-work-item-left">
+                    <div class="recent-work-item-date">{{ .Date }}</div>
+                    <div class="recent-work-item-title">{{ .Title }}</div>
+                    <p class="recent-work-item-desc">
+                        {{ .Description }}
+                    </p>
+                </section>
+                <span class="recent-work-item-arrow">→</span>
+            </a>
+        {{ end }}
     </section>
     <section id="academic-story">
         <span id="academic-story-title" class="section-header">Academic story</span>

@@ -430,3 +430,7 @@ h1 {
     line-height: 123.6%;
     letter-spacing: -0.02em;
 }
+
+#not-found-info {
+    text-align: center;
+}
