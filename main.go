@@ -32,11 +32,15 @@ func main() {
 
 func registerHTML(r *mux.Router) {
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		err := tmpl.ExecuteTemplate(w, "home.html", nil)
+		err := tmpl.ExecuteTemplate(w, "home.html", research_posts[0:2])
 		handleErr(err)
 	})
 	r.HandleFunc("/research", func(w http.ResponseWriter, r *http.Request) {
 		err := tmpl.ExecuteTemplate(w, "research.html", research_posts[0:2])
+		handleErr(err)
+	})
+	r.HandleFunc("/listed-posts", func(w http.ResponseWriter, r *http.Request) {
+		err := tmpl.ExecuteTemplate(w, "postpage.html", research_posts)
 		handleErr(err)
 	})
 	r.HandleFunc("/research/{id}", func(w http.ResponseWriter, r *http.Request) {

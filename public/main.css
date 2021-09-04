@@ -323,6 +323,7 @@ h1 {
 #research-header {
     display: flex;
     flex-direction: column;
+    /*background-image: url("/public/images/stars.png");*/
     align-items: center;
 }
 

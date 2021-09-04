@@ -43,20 +43,15 @@
             <span class="section-header">Recent work</span>
             <a href="/research" class="custom-underline link">Go to research</a>
         </section>
-        <a href="/research/wandering-black-holes" class="recent-work-item" id="wandering-black-holes">
-            <section class="recent-work-item-left">
-                <div class="recent-work-item-date">Aug 2, 2021</div>
-                <div class="recent-work-item-title">Wandering Black Holes in the Milky Way</div>
-            </section>
-            <span class="recent-work-item-arrow">→</span>
-        </a>
-        <a href="/research/stellar-wind-bubbles" class="recent-work-item" id="stellar-wind-bubbles">
-            <section class="recent-work-item-left">
-                <div class="recent-work-item-date">Jun 20, 2021</div>
-                <div class="recent-work-item-title">Efficiently Cooled Stellar Wind Bubbles</div>
-            </section>
-            <span class="recent-work-item-arrow">→</span>
-        </a>
+        {{ range . }}
+            <a href="{{ .Link }}" class="recent-work-item" id="{{ .ID }}">
+                <section class="recent-work-item-left">
+                    <div class="recent-work-item-date">{{ .Date }}</div>
+                    <div class="recent-work-item-title">{{ .Title }}</div>
+                </section>
+                <span class="recent-work-item-arrow">→</span>
+            </a>
+        {{ end }}
     </section>
     <section id="media-talks">
         <section id="media-talks-header">
