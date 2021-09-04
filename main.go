@@ -2,6 +2,7 @@ package main
 
 import (
 	"embed"
+	"io"
 	"log"
 	"net/http"
 	"os"
@@ -25,7 +26,7 @@ func main() {
 	if port == "" {
 		port = "9899"
 	}
-	log.Println("listening in port", port)
+	log.Printf("listening at http://localhost:%s", port)
 	http.ListenAndServe(":"+port, r)
 }
 
@@ -43,6 +44,17 @@ func registerHTML(r *mux.Router) {
 		handleErr(err)
 	})
 	r.PathPrefix("/public/").Handler(http.FileServer(http.FS(public)))
+	r.NotFoundHandler = http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		f, err := public.Open("public/views/notfound.html")
+		if err != nil {
+			http.Error(w, err.Error(), 500)
+			return
+		}
+		defer f.Close()
+		w.WriteHeader(404)
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		io.Copy(w, f)
+	})
 }
 
 func handleErr(err error) {
