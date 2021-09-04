@@ -8,6 +8,7 @@ import (
 	"text/template"
 
 	"github.com/gorilla/mux"
+	"github.com/russross/blackfriday/v2"
 )
 
 var (
@@ -36,6 +37,19 @@ func registerHTML(r *mux.Router) {
 	})
 	r.HandleFunc("/research", func(w http.ResponseWriter, r *http.Request) {
 		err := tmpl.ExecuteTemplate(w, "research.html", research_posts[0:2])
+		handleErr(err)
+	})
+	r.HandleFunc("/research/{id}", func(w http.ResponseWriter, r *http.Request) {
+		fname := "public/" + mux.Vars(r)["id"] + ".md"
+		blog, err := public.ReadFile(fname)
+		if err != nil {
+			err := tmpl.ExecuteTemplate(w, "notfound.html", nil)
+			handleErr(err)
+			return
+		}
+		output := blackfriday.Run(blog)
+		w.Header().Set("Content-Type", "text/html; charset=utf-8")
+		err = tmpl.ExecuteTemplate(w, "post.html", string(output))
 		handleErr(err)
 	})
 	r.HandleFunc("/talks", func(w http.ResponseWriter, r *http.Request) {
