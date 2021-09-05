@@ -249,8 +249,8 @@ h1 {
     justify-content: space-between;
 }
 
-#media-talks-video img {
-    width: 100%;
+#media-talks-video iframe {
+    display: none;
 }
 
 #media-talks-video {
@@ -273,6 +273,9 @@ h1 {
 
 #play-button-container svg {
     margin-left: 11px;
+}
+
+#play-button-container {
     cursor: pointer;
 }
 

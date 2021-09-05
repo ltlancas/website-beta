@@ -23,7 +23,8 @@
                 Specifically, my thesis has concentrated on the role that winds from massive stars play in this process.
             </p>
             <section id="about-me-text-link-wrapper">
-                <a href="https://ui.adsabs.harvard.edu/user/libraries/nkdAMXcpTvSel3KIqoxaQw" class="custom-underline about-me-text-link link">See my publications</a>
+                <a href="https://ui.adsabs.harvard.edu/user/libraries/nkdAMXcpTvSel3KIqoxaQw"
+                    class="custom-underline about-me-text-link link">See my publications</a>
                 <a href="/public/Curriculum_Vitae.pdf" class="custom-underline about-me-text-link link">View my CV</a>
             </section>
         </section>
@@ -37,19 +38,19 @@
             <a href="/research" class="custom-underline link">Go to research</a>
         </section>
         {{ range . }}
-            <a href="{{ .Link }}" class="recent-work-item" id="{{ .ID }}">
-                <section class="recent-work-item-left">
-                    <div class="recent-work-item-date">{{ .Date }}</div>
-                    <div class="recent-work-item-title">{{ .Title }}</div>
-                </section>
-                <span class="recent-work-item-arrow">
-                    <svg width="102" height="39" viewBox="0 0 102 39" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M81.96 0.239998C84.936 3.792 88.056 6.864 91.32 9.456C94.488 12.144 97.848 14.352 101.4 16.08L101.4 22.272C94.296 25.92 87.816 31.248 81.96 38.256L70.872 38.256C72.696 33.456 75 29.088 77.784 25.152L0.600004 25.152L0.600005 13.344L77.784 13.344C75.192 9.6 72.888 5.232 70.872 0.239997L81.96 0.239998Z"
-                            fill="white" />
-                    </svg>
-                </span>
-            </a>
+        <a href="{{ .Link }}" class="recent-work-item" id="{{ .ID }}">
+            <section class="recent-work-item-left">
+                <div class="recent-work-item-date">{{ .Date }}</div>
+                <div class="recent-work-item-title">{{ .Title }}</div>
+            </section>
+            <span class="recent-work-item-arrow">
+                <svg width="102" height="39" viewBox="0 0 102 39" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M81.96 0.239998C84.936 3.792 88.056 6.864 91.32 9.456C94.488 12.144 97.848 14.352 101.4 16.08L101.4 22.272C94.296 25.92 87.816 31.248 81.96 38.256L70.872 38.256C72.696 33.456 75 29.088 77.784 25.152L0.600004 25.152L0.600005 13.344L77.784 13.344C75.192 9.6 72.888 5.232 70.872 0.239997L81.96 0.239998Z"
+                        fill="white" />
+                </svg>
+            </span>
+        </a>
         {{ end }}
     </section>
     <section id="media-talks">
@@ -58,7 +59,11 @@
             <a href="/talks" class="custom-underline link">See all talks & media</a>
         </section>
         <section id="media-talks-video">
-            <img src="/public/images/video_screenshot.png" alt="video_screenshot">
+            <img id="cover-img" src="/public/images/video_screenshot.png" alt="video_screenshot">
+            <iframe id="player" width="1440" height="711" src="https://www.youtube-nocookie.com/embed/j1DbKpQCN1c"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
             <section id="play-button-container">
                 <svg width="37" height="42" viewBox="0 0 37 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M37 21L0.250002 41.7846L0.250004 0.21539L37 21Z" fill="white" />
@@ -68,5 +73,17 @@
     </section>
     {{ template "footer" }}
 </body>
+
+<script>
+    const btn = document.getElementById("play-button-container");
+    const coverImg = document.getElementById("cover-img");
+    btn.addEventListener('click', () => {
+        const player = document.getElementById('player');
+        player.style.display = 'block';
+        player.src += '?autoplay=1';
+        btn.style.display = 'none';
+        coverImg.style.display = 'none';
+    });
+</script>
 
 </html>
