@@ -103,13 +103,13 @@ body {
 #home-top-welcome-wrapper {
     display: flex;
     justify-content: center;
+    text-align: center;
 }
 
 #home-top-welcome {
-    width: 1005px;
+    width: 950px;
     line-height: 127.1%;
     letter-spacing: -0.02em;
-
 }
 
 h1 {
@@ -348,7 +348,7 @@ h1 {
 
 #academic-story-desc a {
     color: var(--hover-color);
-    font-weight: 600;
+    font-weight: 500;
 }
 
 #academic-story {
@@ -363,9 +363,9 @@ h1 {
 }
 
 #academic-story-desc {
-    width: 1096px;
+    width: 800px;
     font-weight: 400;
-    font-size: 32px;
+    font-size: 22px;
     line-height: 123.6%;
     letter-spacing: -0.02em;
     margin-top: 90px;
