@@ -265,15 +265,14 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 64px;
-    width: 172px;
-    height: 172px;
+    width: 127px;
+    height: 127px;
     border-radius: 50%;
     border: 2px solid white;
 }
 
-#play-button-container span {
-    margin-left: 10px;
+#play-button-container svg {
+    margin-left: 11px;
     cursor: pointer;
 }
 
