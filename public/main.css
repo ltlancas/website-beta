@@ -208,6 +208,7 @@ h1 {
 .recent-work-item:hover > .recent-work-item-arrow {
     display: inline;
     font-size: 64px;
+    margin-right: 2px;
 }
 
 .recent-work-item:hover {
