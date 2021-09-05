@@ -1,6 +1,3 @@
 {
-    "GoDirs": ["."],
-    "NonGoDirs": ["public"],
-    "BuildFlags": [],
-    "RuntimeArgs": []
+    "NonGoDirs": ["public"]
 }
