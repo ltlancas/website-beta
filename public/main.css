@@ -325,6 +325,7 @@ h1 {
     flex-direction: column;
     /*background-image: url("/public/images/stars.png");*/
     align-items: center;
+    margin-bottom: 80px;
 }
 
 #research-header.talks {
