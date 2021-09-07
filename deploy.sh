@@ -1,3 +1,3 @@
-docker build -t us.gcr.io/<PROJECT-ID>/<IMAGE>:latest .
-docker push us.gcr.io/<PROJECT-ID>/<IMAGE>:latest
-gcloud run services update <CLOUD RUN SERVICE NAME> --image=us.gcr.io/<PROJECT-ID>/<IMAGE>:latest
+docker build -t us.gcr.io/ferrous-tine-325314/personal-website:latest .
+docker push us.gcr.io/ferrous-tine-325314/personal-website:latest
+gcloud run services update personal-website --image=us.gcr.io/ferrous-tine-325314/personal-website:latest
