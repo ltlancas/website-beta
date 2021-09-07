@@ -1,0 +1,19 @@
+{{ define "hamburger" }}
+<section id="hamburger-menu" style="display: none;">
+    <div class="hamburger-header-bar">
+        <a href="/" class="header-bar-left">Lachlan Lancaster</a>
+        <svg id="hamburger-exit-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.64282 1.64282L18.3571 18.3571" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+            <path d="M18.3572 1.64282L1.64289 18.3571" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+    </div>
+    <div id="hamburger-menu-links">
+        <a href="/talks">Talks & media</a>
+        <a href="/research">Research</a>
+        <a href="/public/Curriculum_Vitae.pdf">CV</a>
+    </div>
+    <a href="mailto:lachlanl@princeton.edu" class="header-bar-right-contact">Contact</a>
+</section>
+{{ end }}
