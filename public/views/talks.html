@@ -13,7 +13,9 @@
         <section id="talks-list">
             {{ range . }}
             <section id="talks-list-item">
-                <img src="/public/images/{{ .Image }}" alt="{{ .Image }}">
+                <div class="talk-img-container">
+                    <img src="/public/images/{{ .Image }}" alt="{{ .Image }}">
+                </div>
                 <section id="talks-list-item-details">
                     <p id="talks-list-item-details-title">{{ .Title }}</p>
                     <p id="talks-list-item-details-desc">{{ .Description }}</p>

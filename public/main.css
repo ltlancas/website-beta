@@ -60,7 +60,6 @@ body {
 #home-top {
     height: 790px;
     background-image: url("/public/images/stars.png");
-    /* padding: 45px 52px 0px 55px; */
 }
 
 .header-bar {
@@ -383,7 +382,6 @@ h1 {
 #research-header {
     display: flex;
     flex-direction: column;
-    /*background-image: url("/public/images/stars.png");*/
     align-items: center;
     margin-bottom: 80px;
 }
@@ -426,7 +424,7 @@ h1 {
 #academic-story-desc {
     width: 800px;
     font-weight: 400;
-    font-size: 22px;
+    font-size: 24px;
     line-height: 123.6%;
     letter-spacing: -0.02em;
     margin-top: 90px;
@@ -448,10 +446,14 @@ h1 {
     justify-content: center;
 }
 
-#talks-list-item img {
+.talk-img-container {
     width: 537px;
     height: 358px;
     margin-right: 35px;
+}
+
+.talk-img-container img {
+    width: 100%;
 }
 
 #talks-list-item-details {
@@ -510,9 +512,20 @@ h1 {
     display: none;
 }
 
+#academic-img-container-desktop {
+    display: block;
+}
+#academic-img-container-mobile {
+    display: none;
+}
+
 @media only screen and (max-width: 790px) {
     .header-bar {
         padding: 45px 19px 0px 20px;
+        margin-bottom: 80px;
+    }
+    #home-top-welcome-wrapper {
+        margin-top: 194px;
     }
     #hamburger-menu {
         height: 100vh;
@@ -522,7 +535,6 @@ h1 {
         align-items: center;
     }
     .hamburger-header-bar {
-        /* width: 100%; */
         align-self: stretch;
         display: flex;
         justify-content: space-between;
@@ -646,19 +658,12 @@ h1 {
     #big-arrow {
         display: none;
     }
-    /* #recent-work-mobile .section-header-mobile {
-        padding-bottom: 60px;
-        border-bottom: 3px solid white;
-    } */
+
     .link {
         font-size: 20px;
         line-height: 123.6%;
         letter-spacing: -0.02em;
     }
-    /* #recent-work-mobile-link {
-        display: inline-block;
-        margin-top: 40px;
-    } */
 
     #media-talks-header {
         margin-left: 20px;
@@ -717,5 +722,81 @@ h1 {
         padding-bottom: 24px;
         font-weight: 600;
         font-size: 16px;
+    }
+    h1 {
+        font-size: 32px;
+    }
+    #talks-list-item {
+        flex-direction: column;
+    }
+    #research-header.talks {
+        margin-bottom: 80px;
+    }
+    #talks-list {
+        margin-left: 0px;
+        margin-right: 0px;
+        padding: 0px 19px 0px 21px;
+    }
+    .talk-img-container {
+        width: 100%;
+        height: auto;
+        margin-right: 0px;
+    }
+    .talk-img-container img {
+        width: 100%;
+    }
+    #talks-list-item-details-title {
+        width: auto;
+        font-family: 'DrukWide';
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 127.1%;
+        letter-spacing: -0.02em;
+        margin-bottom: 15px;
+        margin-top: 10px;
+    }
+    #talks-list-item-details-desc {
+        width: auto;
+        font-family: 'Graphik';
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 126.1%;
+        letter-spacing: -0.02em;
+        margin-bottom: 24px;
+    }
+    #research-header-desc {
+        width: auto;
+        font-size: 20px;
+        padding: 0px 20px;
+    }
+    #academic-story {
+        margin: 0px 20px;
+        margin-top: 80px;
+    }
+    #academic-img-container {
+        width: 100vw;
+    }
+    #academic-img-container img {
+        width: 100%;
+    }
+    #academic-story-desc {
+        width: auto;
+        font-size: 20px;
+        margin-top: 40px;
+    }
+    #recent-work-items a {
+        display: block;
+    }
+    .recent-work-item-desc {
+        display: none;
+    }
+    #academic-story-title {
+        align-self: start;
+    }
+    #academic-img-container-desktop {
+        display: none;
+    }
+    #academic-img-container-mobile {
+        display: block;
     }
 }
