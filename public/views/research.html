@@ -4,58 +4,61 @@
 {{ template "html-headers" }}
 
 <body>
-    {{ template "header"}}
-    <div id="research-header">
-        <h1 id="research-header-title">Research</h1>
-        <h3 id="research-header-desc">
-            A list of my publications can be found <a href="https://ui.adsabs.harvard.edu/user/libraries/nkdAMXcpTvSel3KIqoxaQw">here</a>. For those who prefer to search for me with an ORCiD, mine is<br>
-            <a href="https://orcid.org/0000-0002-0041-4356">0000-0002-0041-4356</a>.
-        </h3>
-    </div>
-    {{ template "recent-work" . }}
-    <section id="academic-story">
-        <span id="academic-story-title" class="section-header">Academic story</span>
-        <img src="/public/images/academic_portrait.png" alt="academic_portrait">
-        <p id="academic-story-desc">
-            I went to undergrad at Carnegie Mellon University, intending to double major in physics and philosophy, I eventually got
-            too hooked on math and switched to physics and mathematics, specializing in astrophysics.<br><br>
-            
-            Inspired by my undergrad research in Galactic Dynamics with 
-            <a href="https://www.cmu.edu/physics/people/faculty/walker.html">Dr. Matthew Walker</a> 
-            and my summer research experience for
-            undergraduates (REU) in Cosmology with 
-            <a href="https://www.lloydknox.com/">Dr. Lloyd Knox</a>, I applied to graduate school in astrophysics. Before I started
-            the PhD program in the Princeton Astrophysics Department, I completed 
-            <a href="https://www.ast.cam.ac.uk/students/undergrad/part_iii"> Part III</a> of the Mathematical Tripos at the
-            Institute of Astronomy (IoA) at Cambridge University in England. While in Cambridge I did research with 
-            <a href="https://people.ast.cam.ac.uk/~vasily/">Dr. Vasily Belokurov</a> 
-            and <a href="https://people.ast.cam.ac.uk/~nwe/">Dr. Wyn Evans</a> on the structure of the Milky Way’s Stellar Halo.<br><br>
-            
-            Since starting my PhD at Princeton in 2017 I have worked on a large variety of topics in Astrophysics. My work under 
-            <a href="https://www.simonsfoundation.org/people/david-spergel/">Dr. David Spergel</a> has caused me to travel often to the 
-            <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/">Center for Computational Astrophysics (CCA)</a>
-            where I have also collaborated with many other researchers. I have also worked closely with 
-            <a href="https://crispygreene.wixsite.com/jenny">Dr. Jenny Greene</a> on observational projects
-            related to Intermediate Mass Black Holes.<br><br>
-            
-            In 2019 I started my thesis work with <a href="https://www.astro.princeton.edu/~eco/">Dr. Eve Ostriker</a>, 
-            though I also work closely with 
-            <a href="https://www.astro.princeton.edu/~cgkim/astral/index.html#">Dr. Chang-Goo Kim</a> and 
-            <a href="https://jeonggyukim.github.io/page/about/">Dr. Jeong-Gyu Kim</a>.
-            The main guiding goal of my thesis, and my planned future work, is to try to understand the magneto-hydrodynamic (MHD),
-            stellar dynamic, and feedback processes involved in star formation in dense environments. I am particularly interested
-            in the outstanding problem of 
-            <a href="https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56...83B/abstract">Multiple Populations in Globular Star Clusters</a>, 
-            and how feedback from forming stars can
-            act to chemically enrich gas that subsequently forms more stars, creating chemically distinct but co-natal populations.
-            In order to tackle this larger goal, I have found that we must first form a much better understanding of how winds from
-            massive stars interact with the dense environments in which these stars form. The improved understanding of stellar wind
-            feedback given by my thesis work has also allowed us to have a much better understanding of star-formation works in
-            normal star forming environments (in our own Milky Way) as well as in forming Super Star Clusters (the closest we can
-            get to an observable version of a forming Globular Cluster).
-        </p>
-    </section>
-    {{ template "footer" }}
+    {{ template "hamburger" }}
+    <main id="main">
+        {{ template "header"}}
+        <div id="research-header">
+            <h1 id="research-header-title">Research</h1>
+            <h3 id="research-header-desc">
+                A list of my publications can be found <a href="https://ui.adsabs.harvard.edu/user/libraries/nkdAMXcpTvSel3KIqoxaQw">here</a>. For those who prefer to search for me with an ORCiD, mine is<br>
+                <a href="https://orcid.org/0000-0002-0041-4356">0000-0002-0041-4356</a>.
+            </h3>
+        </div>
+        {{ template "recent-work" . }}
+        <section id="academic-story">
+            <span id="academic-story-title" class="section-header">Academic story</span>
+            <img src="/public/images/academic_portrait.png" alt="academic_portrait">
+            <p id="academic-story-desc">
+                I went to undergrad at Carnegie Mellon University, intending to double major in physics and philosophy, I eventually got
+                too hooked on math and switched to physics and mathematics, specializing in astrophysics.<br><br>
+                
+                Inspired by my undergrad research in Galactic Dynamics with 
+                <a href="https://www.cmu.edu/physics/people/faculty/walker.html">Dr. Matthew Walker</a> 
+                and my summer research experience for
+                undergraduates (REU) in Cosmology with 
+                <a href="https://www.lloydknox.com/">Dr. Lloyd Knox</a>, I applied to graduate school in astrophysics. Before I started
+                the PhD program in the Princeton Astrophysics Department, I completed 
+                <a href="https://www.ast.cam.ac.uk/students/undergrad/part_iii"> Part III</a> of the Mathematical Tripos at the
+                Institute of Astronomy (IoA) at Cambridge University in England. While in Cambridge I did research with 
+                <a href="https://people.ast.cam.ac.uk/~vasily/">Dr. Vasily Belokurov</a> 
+                and <a href="https://people.ast.cam.ac.uk/~nwe/">Dr. Wyn Evans</a> on the structure of the Milky Way’s Stellar Halo.<br><br>
+                
+                Since starting my PhD at Princeton in 2017 I have worked on a large variety of topics in Astrophysics. My work under 
+                <a href="https://www.simonsfoundation.org/people/david-spergel/">Dr. David Spergel</a> has caused me to travel often to the 
+                <a href="https://www.simonsfoundation.org/flatiron/center-for-computational-astrophysics/">Center for Computational Astrophysics (CCA)</a>
+                where I have also collaborated with many other researchers. I have also worked closely with 
+                <a href="https://crispygreene.wixsite.com/jenny">Dr. Jenny Greene</a> on observational projects
+                related to Intermediate Mass Black Holes.<br><br>
+                
+                In 2019 I started my thesis work with <a href="https://www.astro.princeton.edu/~eco/">Dr. Eve Ostriker</a>, 
+                though I also work closely with 
+                <a href="https://www.astro.princeton.edu/~cgkim/astral/index.html#">Dr. Chang-Goo Kim</a> and 
+                <a href="https://jeonggyukim.github.io/page/about/">Dr. Jeong-Gyu Kim</a>.
+                The main guiding goal of my thesis, and my planned future work, is to try to understand the magneto-hydrodynamic (MHD),
+                stellar dynamic, and feedback processes involved in star formation in dense environments. I am particularly interested
+                in the outstanding problem of 
+                <a href="https://ui.adsabs.harvard.edu/abs/2018ARA%26A..56...83B/abstract">Multiple Populations in Globular Star Clusters</a>, 
+                and how feedback from forming stars can
+                act to chemically enrich gas that subsequently forms more stars, creating chemically distinct but co-natal populations.
+                In order to tackle this larger goal, I have found that we must first form a much better understanding of how winds from
+                massive stars interact with the dense environments in which these stars form. The improved understanding of stellar wind
+                feedback given by my thesis work has also allowed us to have a much better understanding of star-formation works in
+                normal star forming environments (in our own Milky Way) as well as in forming Super Star Clusters (the closest we can
+                get to an observable version of a forming Globular Cluster).
+            </p>
+        </section>
+        {{ template "footer" }}
+    </main>
 </body>
-
+{{ template "hamburger-js" }}
 </html>

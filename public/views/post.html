@@ -2,10 +2,14 @@
 <html lang="en">
 {{ template "html-headers" }}
 <body>
-    {{ template "header" }}
-    <section id="post-container">
-        {{ . }}
-    </section>
-    {{ template "footer" }}
+    {{ template "hamburger" }}
+    <main id="main">
+        {{ template "header" }}
+        <section id="post-container">
+            {{ . }}
+        </section>
+        {{ template "footer" }}
+    </main>
 </body>
+{{ template "hamburger-js" }}
 </html>

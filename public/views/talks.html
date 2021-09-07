@@ -4,23 +4,26 @@
 {{ template "html-headers" }}
 
 <body>
-    {{ template "header"}}
-    <div id="research-header" class="talks">
-        <h1 id="research-header-title">Talks & Media</h1>
-    </div>
-    <section id="talks-list">
-        {{ range . }}
-        <section id="talks-list-item">
-            <img src="/public/images/{{ .Image }}" alt="{{ .Image }}">
-            <section id="talks-list-item-details">
-                <p id="talks-list-item-details-title">{{ .Title }}</p>
-                <p id="talks-list-item-details-desc">{{ .Description }}</p>
-                <a href="{{ .Link }}" class="custom-underline">{{ .CallToAction }}</a>
+    {{ template "hamburger" }}
+    <main id="main">
+        {{ template "header"}}
+        <div id="research-header" class="talks">
+            <h1 id="research-header-title">Talks & Media</h1>
+        </div>
+        <section id="talks-list">
+            {{ range . }}
+            <section id="talks-list-item">
+                <img src="/public/images/{{ .Image }}" alt="{{ .Image }}">
+                <section id="talks-list-item-details">
+                    <p id="talks-list-item-details-title">{{ .Title }}</p>
+                    <p id="talks-list-item-details-desc">{{ .Description }}</p>
+                    <a href="{{ .Link }}" class="custom-underline">{{ .CallToAction }}</a>
+                </section>
             </section>
+            {{ end }}
         </section>
-        {{ end }}
-    </section>
-    {{ template "footer" }}
+        {{ template "footer" }}
+    </main>
 </body>
-
+{{ template "hamburger-js" }}
 </html>
