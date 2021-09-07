@@ -30,17 +30,44 @@ func main() {
 	http.ListenAndServe(":"+port, r)
 }
 
+type researchData struct {
+	HeaderTitle string
+	Link        string
+	LinkAction  string
+	Posts       []research_post
+	ShowDesc    bool
+}
+
 func registerHTML(r *mux.Router) {
 	r.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
-		err := tmpl.ExecuteTemplate(w, "home.html", research_posts[0:2])
+		data := researchData{
+			HeaderTitle: "Latest Work",
+			Link:        "/research",
+			LinkAction:  "Go to research",
+			Posts:       research_posts[0:2],
+		}
+		err := tmpl.ExecuteTemplate(w, "home.html", data)
 		handleErr(err)
 	})
 	r.HandleFunc("/research", func(w http.ResponseWriter, r *http.Request) {
-		err := tmpl.ExecuteTemplate(w, "research.html", research_posts[0:2])
+		data := researchData{
+			HeaderTitle: "Latest Work",
+			Link:        "/listed-posts",
+			LinkAction:  "See all research",
+			Posts:       research_posts[0:2],
+			ShowDesc:    true,
+		}
+		err := tmpl.ExecuteTemplate(w, "research.html", data)
 		handleErr(err)
 	})
 	r.HandleFunc("/listed-posts", func(w http.ResponseWriter, r *http.Request) {
-		err := tmpl.ExecuteTemplate(w, "postpage.html", research_posts)
+		data := researchData{
+			HeaderTitle: "All research",
+			Link:        "/research",
+			LinkAction:  "Research Summary",
+			Posts:       research_posts,
+		}
+		err := tmpl.ExecuteTemplate(w, "postpage.html", data)
 		handleErr(err)
 	})
 	r.HandleFunc("/research/{id}", func(w http.ResponseWriter, r *http.Request) {

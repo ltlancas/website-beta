@@ -12,24 +12,7 @@
             <a href="https://orcid.org/0000-0002-0041-4356">0000-0002-0041-4356</a>.
         </h3>
     </div>
-    <section id="recent-work" class="research-page">
-        <section id="recent-work-header">
-            <span class="section-header">Latest Work</span>
-            <a href="/listed-posts" class="custom-underline link">See all research</a>
-        </section>
-        {{ range . }}
-            <a href="{{ .Link }}" class="recent-work-item" id="{{ .ID }}">
-                <section class="recent-work-item-left">
-                    <div class="recent-work-item-date">{{ .Date }}</div>
-                    <div class="recent-work-item-title">{{ .Title }}</div>
-                    <p class="recent-work-item-desc">
-                        {{ .Description }}
-                    </p>
-                </section>
-                <span class="recent-work-item-arrow">→</span>
-            </a>
-        {{ end }}
-    </section>
+    {{ template "recent-work" . }}
     <section id="academic-story">
         <span id="academic-story-title" class="section-header">Academic story</span>
         <img src="/public/images/academic_portrait.png" alt="academic_portrait">
