@@ -66,6 +66,7 @@ func registerHTML(r *mux.Router) {
 			Link:        "/research",
 			LinkAction:  "Research Summary",
 			Posts:       research_posts,
+			ShowDesc:    true,
 		}
 		err := tmpl.ExecuteTemplate(w, "postpage.html", data)
 		handleErr(err)
