@@ -193,6 +193,22 @@ h1 {
     background-image: url("/public/images/stellar_wind_bubbles.png");
 }
 
+#cncha:hover {
+    background-image: url("/public/images/cncha.png");
+}
+
+#fdm-df:hover {
+    background-image: url("/public/images/fdm-df.png");
+}
+
+#beta-halo:hover {
+    background-image: url("/public/images/wandering_black_holes.png");
+}
+
+#tpcf-halo:hover {
+    background-image: url("/public/images/wandering_black_holes.png");
+}
+
 .recent-work-item {
     padding: 31px 0 40px 0;
     border-bottom: 3px solid white;
