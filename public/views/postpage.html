@@ -5,15 +5,8 @@
 
 <body>
     {{ template "hamburger" }}
-    <main id="main">
+    <main id="main" class="postpage">
         {{ template "header"}}
-        <div id="research-header">
-            <h1 id="research-header-title">Research</h1>
-            <h3 id="research-header-desc">
-                A list of my publications can be found <a href="https://ui.adsabs.harvard.edu/user/libraries/nkdAMXcpTvSel3KIqoxaQw">here</a>. For those who prefer to search for me with an ORCiD, mine is<br>
-                <a href="https://orcid.org/0000-0002-0041-4356">0000-0002-0041-4356</a>.
-            </h3>
-        </div>
         {{ template "recent-work" . }}
         {{ template "footer" }}
     </main>

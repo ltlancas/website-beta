@@ -322,20 +322,22 @@ h1 {
     height: 127px;
     border-radius: 50%;
     border: 2px solid white;
+    cursor: pointer;
 }
 
 #play-button-container svg {
     margin-left: 11px;
-}
-
-#play-button-container {
-    cursor: pointer;
+    fill: white;
 }
 
 #media-talks-video:hover > #play-button-container {
     border: 2px solid var(--hover-color);
     color: var(--hover-color);
     background-color: rgba(103, 226, 197, 0.2);
+}
+
+#media-talks-video:hover > #play-button-container svg {
+    fill: var(--hover-color);
 }
 
 #footer {
@@ -522,7 +524,12 @@ h1 {
 #academic-img-container-mobile {
     display: none;
 }
-
+#play-button-mobile {
+    display: none;
+}
+.postpage .header-bar {
+    margin-bottom: 103px;
+}
 @media only screen and (max-width: 790px) {
     .header-bar {
         padding: 45px 19px 0px 20px;
@@ -568,7 +575,7 @@ h1 {
         display: none;
     }
     #home-top-welcome {
-        font-size: 32px;
+        font-size: 36px;
     }
     #about-me {
         display: none;
@@ -618,7 +625,10 @@ h1 {
         font-size: 24px;
     }
     #recent-work {
-        margin: 0px 19px 56px 20px;
+        margin: 0px 19px 135px 20px;
+    }
+    #media-talks {
+        margin-bottom: 55px;
     }
     #recent-work-header {
         grid-column: 1/3;
@@ -684,7 +694,22 @@ h1 {
         justify-self: start;
         grid-column: 1/3;
     }
-
+    #play-button-container {
+        width: 86px;
+        height: 86px;
+    }
+    #play-button-desktop {
+        display: none;
+    }
+    #play-button-mobile {
+        display: block;
+    }
+    #play-button-container svg {
+        margin-left: 5px;
+    }
+    .postpage .header-bar {
+        margin-bottom: 80px;
+    }
     #footer {
         padding-top: 80px;
         padding-bottom: 54px;
@@ -692,7 +717,6 @@ h1 {
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 1fr 2fr;
     }
-
     .footer-contact {
         display: flex;
         flex-direction: column;

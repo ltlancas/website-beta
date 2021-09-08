@@ -64,7 +64,7 @@ func registerHTML(r *mux.Router) {
 		data := researchData{
 			HeaderTitle: "All research",
 			Link:        "/research",
-			LinkAction:  "Research Summary",
+			LinkAction:  "Backt to summary",
 			Posts:       research_posts,
 			ShowDesc:    true,
 		}
